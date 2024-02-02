@@ -8,26 +8,60 @@
 <body>
     <div id="top">
     <h1>Contact Us</h1>
-    <p>Please complete the information below. Fields marked with
-        <span class="required">*</span> are required fields</p>
+   <p>Please complete the information below. Fields marked with <span
+    class="required">*</span> are required fields</p>
     </div>
 
     <div class="data">
-        <form action="nguy0907@algonquinlive.com" method="post">
+        <form action="mailto:2002richard.nguyen@gmail.com"  method="post">
             <fieldset>
             <legend>Your Data</legend>
+           
             <table>
-            
-            <tr>First Name<span class="required">* </span>  <input type="text"></tr>
-            <br> <br>
-            <tr>Last Name<span class="required">* </span>  <input type="text"></tr>
+                <tbody>
+            <tr>
+            <td>First Name<span class="required">* </span>  <input type="text"></td>
+
+          
+            <td>Last Name<span class="required">* </span>  <input type="text"></td>
+
+          
+            <td>Street Address<span class="required">* </span>  <input type="text"></td>
+
+         
+            <td>City<span class="required">* </span>  <input type="text"></td>
+
+           
+            <td>Province<span class="required">* </span> 
+                 <select name="label" id="province"> <option value="province">Select an option</option></select>
+                </td>
+
+               
+                <td>Postal Code<span class="required">* </span>  <input type="text"></td>
+
+                
+                <td>Email Address<span class="required">* </span>  <input type="email"></td>
+
+               
+                <td>Phone Number<span class="required">* </span>  <input type="tel"></td>
+</tr>
+</tbody>
             </table>
             </fieldset>
+
             <fieldset>
              <legend>Agreement</legend>
-             ADD CONTENT
+
+             <!-- I agree checkhbox -->
+             <label for="id">Accept Agreement</label>
+             <span class="required">*</span> 
+             <input type="checkbox" name="boxset" value="data">
+
+             <button>Reset</button>
+             <button>Submit</button>
             </fieldset>
             </form>
+
     </div>
 
 </body>
