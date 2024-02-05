@@ -18,34 +18,56 @@
             <legend>Your Data</legend>
            
             <table>
-                <tbody>
-            <tr>
-            <td>First Name<span class="required">* </span>  <input type="text" required="required"></td>
-
-          
-            <td>Last Name<span class="required">* </span>  <input type="text" required="required"></td>
-
-          
-            <td>Street Address<span class="required">* </span>  <input type="text" required="required"></td>
-
-         
-            <td>City<span class="required">* </span>  <input type="text" required="required"></td>
-
-           
-            <td>Province<span class="required">* </span> 
-                 <select name="label" id="province"> <option value="province">Select an option</option></select>
-                </td>
-
-               
-                <td>Postal Code<span class="required">* </span>  <input type="text" required="required"></td>
-
+                <tr>
+                    <td >
+                First Name <span class="required">* </span>  <input type="text" required="required"></td>
+                </tr>
                 
-                <td>Email Address<span class="required">* </span>  <input type="email" required="required"></td>
-
-               
-                <td>Phone Number<span class="required">* </span>  <input type="tel" required="required"></td>
-</tr>
-</tbody>
+                <tr>
+                 <td>Last Name <span class="required">* </span>  <input type="text" required="required"></td>
+                </tr>
+                
+                <tr>
+                    <td>Street Address <span class="required">* </span>  <input type="text" required="required"></td>
+                   </tr>
+                
+                   <tr>
+                    <td>City<span class="required">* </span>  <input type="text" required="required"></td>
+                   </tr>
+                
+                   <tr>
+                    <td>Province<span class="required">* </span> 
+                        <select name="label" id="province"> 
+                           <option value="province">Select an option</option>
+                           <option value="province">AB</option>
+                           <option value="province">BC</option>
+                           <option value="province">MB</option>
+                           <option value="province">NB</option>
+                           <option value="province">NL</option>
+                           <option value="province">NT</option>
+                           <option value="province">NS</option>
+                           <option value="province">NU</option>
+                           <option value="province">ON</option>
+                           <option value="province">PE</option>
+                           <option value="province">QC</option>
+                           <option value="province">SK</option>
+                           <option value="province">YK</option>
+                       </select></td>
+                   </tr>
+                
+                   <tr>
+                    <td>Postal Code<span class="required">* </span>  <input type="text" required="required"></td>
+                   </tr>
+                
+                   
+                   <tr>
+                    <td>Email Address<span class="required">* </span>  <input type="email" required="required"></td>
+                   </tr>
+                
+                   
+                   <tr>
+                    <td>Phone Number<span class="required">* </span>  <input type="tel" required="required"></td>
+                   </tr>
             </table>
             </fieldset>
 
@@ -55,7 +77,7 @@
              <!-- I agree checkhbox -->
              <label>Accept Agreement</label>
              <span class="required">*</span> 
-             <input type="checkbox" name="boxset" value="data">
+             <input type="checkbox" name="boxset" value="data" required="required">
 
              <button type="reset">Reset</button>
              <button type="submit">Submit</button>
