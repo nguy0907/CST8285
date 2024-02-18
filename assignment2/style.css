@@ -34,3 +34,8 @@ td{
 .required{
     color: #ffa600;
 }
+
+#data p{
+    padding-left: 8px;
+  
+}

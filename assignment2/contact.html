@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Contact</title>
 </head>
 
@@ -14,31 +15,30 @@
         </p>
     </div>
 
-    <div class="data">
+    <div id="data">
         <form action="mailto:test@gmail.com" method="post">
             <fieldset>
                 <legend>Your Data</legend>
 
                 <table>
                     <tr>
-                        <td>
-                            First Name <span class="required">* </span> <input type="text" required="required"></td>
+                        <td><p> First Name <span class="required">* </span> <input type="text" required="required"></p></td>
                     </tr>
 
                     <tr>
-                        <td>Last Name <span class="required">* </span> <input type="text" required="required"></td>
+                        <td><p>Last Name <span class="required">* </span> <input type="text" required="required"></p></td>
                     </tr>
 
                     <tr>
-                        <td>Street Address <span class="required">* </span> <input type="text" required="required"></td>
+                        <td><p>Street Address <span class="required">* </span> <input type="text" required="required"></p></td>
                     </tr>
 
                     <tr>
-                        <td>City<span class="required">* </span> <input type="text" required="required"></td>
+                        <td><p>City<span class="required">* </span> <input type="text" required="required"></p></td>
                     </tr>
 
                     <tr>
-                        <td>Province<span class="required">* </span>
+                        <td> <p>Province<span class="required">* </span>
                             <select name="label" id="province">
                                 <option value="province">Select an option</option>
                                 <option value="province">AB</option>
@@ -54,22 +54,24 @@
                                 <option value="province">QC</option>
                                 <option value="province">SK</option>
                                 <option value="province">YK</option>
-                            </select></td>
+                            </select>
+                        </p>
+                        </td>
                     </tr>
 
                     <tr>
-                        <td>Postal Code<span class="required">* </span> <input type="text" required="required"></td>
-                    </tr>
-
-
-                    <tr>
-                        <td>Email Address<span class="required">* </span> <input type="email" required="required"></td>
+                        <td><p>Postal Code<span class="required">* </span> <input type="text" required="required"></p></td>
                     </tr>
 
 
                     <tr>
-                        <td>Phone Number<span class="required">* </span> <input type="tel" required="required"
-                              minlength="10"  maxlength="10"></td>
+                        <td><p>Email Address<span class="required">* </span> <input type="email" required="required"></p></td>
+                    </tr>
+
+
+                    <tr>
+                        <td> <p> Phone Number<span class="required">* </span> <input type="tel" required="required"
+                              minlength="10"  maxlength="10"></p></td>
                     </tr>
                 </table>
             </fieldset>
@@ -78,10 +80,9 @@
                 <legend>Agreement</legend>
 
                 <!-- I agree checkhbox -->
+                 <input type="checkbox" name="boxset" value="data" required="required">
                 <label>Accept Agreement</label>
                 <span class="required">*</span>
-                <input type="checkbox" name="boxset" value="data" required="required">
-
                 <button type="reset">Reset</button>
                 <button type="submit">Submit</button>
             </fieldset>
