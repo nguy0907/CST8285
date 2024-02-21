@@ -1,3 +1,4 @@
+/* Id top selector */
 #top {
 background-color: #33ff88;
 margin-top: 15px;
@@ -31,6 +32,7 @@ td{
     padding: 2px;
 }
 
+/* Class required selector */
 .required{
     color: #ffa600;
 }
