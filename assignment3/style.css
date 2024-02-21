@@ -14,6 +14,7 @@ fieldset{
     background-color: #8f8e6e;
 }
 
+/* Type selector */
 legend{
     color: #d46622;
     background-color: #ccadbe;
@@ -40,4 +41,13 @@ td{
 #top p{
     padding-left: 8px;
    
+}
+/* Attribute Selector */
+input[type ="text"] {
+color: red;
+}
+
+/* Universal Attribute */
+* {
+    color: green;
 }
