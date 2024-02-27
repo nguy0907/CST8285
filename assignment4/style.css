@@ -48,6 +48,6 @@ color: red;
 }
 
 /* Universal Attribute */
-* {
+* td {
     color: green;
 }
