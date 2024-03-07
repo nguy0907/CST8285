@@ -51,3 +51,13 @@ color: red;
 * td {
     color: green;
 }
+
+.homebuttom:hover,
+a[ href="#Products"]:hover{
+background-color: red;
+}
+
+a[href="currency.php"]:hover,
+a[class="service2"]:hover{
+    background-color: grey;
+}
