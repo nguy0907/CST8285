@@ -53,11 +53,15 @@ color: red;
 }
 
 .homebuttom:hover,
-a[ href="#Products"]:hover{
+a[ href="#Products"]:hover,
+a[href="#Contact"]:hover,
+a[href="aboutme.html"]:hover{
 background-color: red;
 }
 
 a[href="currency.php"]:hover,
+a[class="service2"]:hover,
+a[class="frenchtranslation"]:hover,
 a[class="service2"]:hover{
     background-color: grey;
 }
