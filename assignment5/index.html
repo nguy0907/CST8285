@@ -1,112 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #myInput {
+            background-image: url('/css/searchicon.png');
+            background-position: 10px 12px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+
+        #myUL {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #myUL li a {
+            border: 1px solid #ddd;
+            margin-top: -1px;
+            /* Prevent double borders */
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            display: block
+        }
+
+        #myUL li a:hover:not(.header) {
+            background-color: #eee;
+        }
+    </style>
     <title>Home</title>
 
-<style>
-    * {
-box-sizing: border-box;
-}
-#myInput {
-background-image: url('/css/searchicon.png');
-background-position: 10px 12px;
-background-repeat: no-repeat;
-width: 100%;
-font-size: 16px;
-padding: 12px 20px 12px 40px;
-border: 1px solid #ddd;
-margin-bottom: 12px;
-}
-#myUL {
-list-style-type: none;
-padding: 0;
-margin: 0;
-}
-#myUL li a {
-border: 1px solid #ddd;
-margin-top: -1px; /* Prevent double borders */
-background-color: #f6f6f6;
-padding: 12px;
-text-decoration: none;
-font-size: 18px;
-color: black;
-display: block
-8
-}
-#myUL li a:hover:not(.header) {
-background-color: #eee;
-}
-</style>
 </head>
 
 <body>
     <!-- Menu Bar -->
-<div>
-    <!-- Homebutton -->
-    <a href="index.html" class="homebuttom">Home <i class="fa-solid fa-house"></i></a>
-    
-    <!-- Produce Dropdown Menu -->
-    <div class="dropdown">
-<a href="#Products" class="Products">Products <i class="fa-solid fa-caret-down"></i></a>
-<div class="dropdown-content">
-<a href="currency.php">Currency exchange</a>
-<a class="service2">Service 2</a>
-</div>
-    </div>
+    <div>
+        <!-- Homebutton -->
+        <a href="index.html" class="homebuttom">Home <i class="fa-solid fa-house"></i></a>
 
-      <!-- Produce Dropdown Menu -->
-    <div class="dropdown">
-        <a href="contact.html" class="Contact">Contact Us <i class="fa-solid fa-caret-down"></i></a>
-        <div class="dropdown-content">
-        <a class="frenchtranslation">Contactez-nous </a>
-        <a class="service2">Contacta con nosotras</a>
-         </div>
+        <!-- Produce Dropdown Menu -->
+        <div class="dropdown">
+            <a href="#Products" class="Products">Products <i class="fa-solid fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a href="currency.php">Currency exchange</a>
+                <a class="service2">Service 2</a>
             </div>
+        </div>
 
-            <a href="aboutme.html">About</a>
+        <!-- Produce Dropdown Menu -->
+        <div class="dropdown">
+            <a href="contact.html" class="Contact">Contact Us <i class="fa-solid fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a class="frenchtranslation">Contactez-nous </a>
+                <a class="service2">Contacta con nosotras</a>
+            </div>
+        </div>
+    
+        <a href="aboutme.html">About</a>
 
-            <p>Welcome to my website! Hope you enjoy your stay. Let me know
-                if you need anything, always love chatting with you all.
-            </p>
+        <p id="messageHour"></p>
+      
+        <script>
+            //Date Object 
+            const hours = new Date().getHours;
+            var hoursMessage;
+            
+            if (hours > 16){
+             hoursMessage = "hi";
+            }
+
+            document.getElementById("messageHour").innerHTML = hoursMessage;
+        </script>
+
+        <p>Welcome to my website! Hope you enjoy your stay. Let me know
+            if you need anything, always love chatting with you all.
+        </p>
 
 
-            <h2>My Phonebook</h2>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-<ul id="myUL">
-<li><a href="#">Pencil</a></li>
-<li><a href="#">Eraser</a></li>
-<li><a href="#">Apple</a></li>
-<li><a href="#">Sharpener</a></li>
-<li><a href="#">Phonebook</a></li>
-<li><a href="#">Math Textbook</a></li>
-<li><a href="#">Calculator</a></li>
-</ul>
 
-<!-- Javascript section -->
-<script>
-function myFunction() {
-var input, filter, ul, li, a, i, txtValue;
-input = document.getElementById("myInput");
-filter = input.value.toUpperCase();
-ul = document.getElementById("myUL");
-li = ul.getElementsByTagName("li");
-for (i = 0; i < li.length; i++) {
-a = li[i].getElementsByTagName("a")[0];
-txtValue = a.textContent || a.innerText;
-if (txtValue.toUpperCase().indexOf(filter) > -1) {
-li[i].style.display = "";
-} else {
-li[i].style.display = "none";
-}
-}
-10
-}
+        <h2>My Phonebook</h2>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+        <ul id="myUL">
+            <li><a href="#">Pencil</a></li>
+            <li><a href="#">Eraser</a></li>
+            <li><a href="#">Apple</a></li>
+            <li><a href="#">Sharpener</a></li>
+            <li><a href="#">Phonebook</a></li>
+            <li><a href="#">Math Textbook</a></li>
+            <li><a href="#">Calculator</a></li>
+            <li><a href="#">Basketball</a></li>
+            <li><a href="#">Hockey Puck</a></li>
+            <li><a href="#">Hockey Stick</a></li>
+            <li><a href="#">Hockey Net</a></li>
+            <li><a href="#">Eraser</a></li>
+            <li><a href="#">Apple</a></li>
+            <li><a href="#">Sharpener</a></li>
+            <li><a href="#">Phonebook</a></li>
+            <li><a href="#">Math Textbook</a></li>
+            <li><a href="#">Calculator</a></li>
+            <li><a href="#">Basketball</a></li>
+            <li><a href="#">Hockey Puck</a></li>
+            <li><a href="#">Hockey Stick</a></li>
+        </ul>
 
-</script>
-</div>
+        <!-- Javascript section -->
+        <script>
+            function myFunction() {
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName("li");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+                10
+            }
+
+            // This section will ensure the list don't show up when entering the website right away
+
+            if (li[i].style.display = "") {
+                li[i].style.display = "none";
+            }
+        </script>
+    </div>
 </body>
+
 </html>
