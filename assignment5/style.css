@@ -51,7 +51,11 @@ color: red;
 * td {
     color: green;
 }
+/* Menu CSS */
 
+.menu{
+    
+}
 .homebuttom:hover,
 a[ href="#Products"]:hover,
 a[href="#Contact"]:hover,
@@ -64,4 +68,18 @@ a[class="service2"]:hover,
 a[class="frenchtranslation"]:hover,
 a[class="service2"]:hover{
     background-color: grey;
+}
+
+#messageHour{
+    color: red;
+    font-weight: bold;
+    float: right;
+}
+
+.dropdown-content{
+    display: none;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
 }

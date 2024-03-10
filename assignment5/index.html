@@ -51,7 +51,7 @@
 
 <body>
     <!-- Menu Bar -->
-    <div>
+    <div class="menu">
         <!-- Homebutton -->
         <a href="index.html" class="homebuttom">Home <i class="fa-solid fa-house"></i></a>
 
@@ -60,6 +60,7 @@
             <a href="#Products" class="Products">Products <i class="fa-solid fa-caret-down"></i></a>
             <div class="dropdown-content">
                 <a href="currency.php">Currency exchange</a>
+                <br>
                 <a class="service2">Service 2</a>
             </div>
         </div>
@@ -69,24 +70,38 @@
             <a href="contact.html" class="Contact">Contact Us <i class="fa-solid fa-caret-down"></i></a>
             <div class="dropdown-content">
                 <a class="frenchtranslation">Contactez-nous </a>
+                <br>
                 <a class="service2">Contacta con nosotras</a>
             </div>
         </div>
     
         <a href="aboutme.html">About</a>
-
+</div>
         <p id="messageHour"></p>
-      
+        <p id="cock"></p>
         <script>
             //Date Object 
-            const hours = new Date().getHours;
-            var hoursMessage;
+
+             var date = new Date();
+             var hours = date.getHours();
+
+             document.getElementById("cock").innerHTML = hours;
+
+             
+            if (hours < 6){
+           document.getElementById("messageHour").innerHTML = 'Good morning, you must be an early bird!';
+         
+            } else if (hours > 6 && hours < 12){
+           document.getElementById("messageHour").innerHTML = 'Good morning';
+
+            } else if (hours > 12 && hours < 17){
+                document.getElementById("messageHour").innerHTML = 'Good afternoon';
             
-            if (hours > 16){
-             hoursMessage = "hi";
+            } else {
+                document.getElementById("messageHour").innerHTML = 'Good evening';
             }
 
-            document.getElementById("messageHour").innerHTML = hoursMessage;
+            
         </script>
 
         <p>Welcome to my website! Hope you enjoy your stay. Let me know
@@ -109,8 +124,8 @@
             <li><a href="#">Hockey Puck</a></li>
             <li><a href="#">Hockey Stick</a></li>
             <li><a href="#">Hockey Net</a></li>
-            <li><a href="#">Eraser</a></li>
-            <li><a href="#">Apple</a></li>
+            <li><a href="#">Upper Deck 23-24</a></li>
+            <li><a href="#">Upper Deck 22-23</a></li>
             <li><a href="#">Sharpener</a></li>
             <li><a href="#">Phonebook</a></li>
             <li><a href="#">Math Textbook</a></li>
@@ -146,7 +161,7 @@
                 li[i].style.display = "none";
             }
         </script>
-    </div>
+    
 </body>
 
 </html>
