@@ -54,13 +54,17 @@ color: red;
 /* Menu CSS */
 
 .menu{
-    
+    display: flex;
+}
+
+.menu a {
+ margin-right: 5rem;
 }
 .homebuttom:hover,
 a[ href="#Products"]:hover,
 a[href="#Contact"]:hover,
 a[href="aboutme.html"]:hover{
-background-color: red;
+background-color: rgb(209, 206, 206);
 }
 
 a[href="currency.php"]:hover,

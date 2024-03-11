@@ -78,14 +78,14 @@
         <a href="aboutme.html">About</a>
 </div>
         <p id="messageHour"></p>
-        <p id="cock"></p>
+        
         <script>
             //Date Object 
 
              var date = new Date();
              var hours = date.getHours();
 
-             document.getElementById("cock").innerHTML = hours;
+    
 
              
             if (hours < 6){
@@ -94,7 +94,7 @@
             } else if (hours > 6 && hours < 12){
            document.getElementById("messageHour").innerHTML = 'Good morning';
 
-            } else if (hours > 12 && hours < 17){
+            } else if (hours > 12 && hours < 18){
                 document.getElementById("messageHour").innerHTML = 'Good afternoon';
             
             } else {
@@ -104,29 +104,49 @@
             
         </script>
 
-        <p>Welcome to my website! Hope you enjoy your stay. Let me know
-            if you need anything, always love chatting with you all.
+        <p>Welcome to my website! On this page, you will see sports cards and supplies for all 4 major sports.
+            Hockey Cards, Basketball Cards, Baseball Cards, and Football Cards. Hope you enjoy your stay.
         </p>
 
 
 
-        <h2>My Phonebook</h2>
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+        <h2>Rich's item</h2>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for items.." title="Type in a name">
         <ul id="myUL">
-            <li><a href="#">Pencil</a></li>
-            <li><a href="#">Eraser</a></li>
-            <li><a href="#">Apple</a></li>
-            <li><a href="#">Sharpener</a></li>
-            <li><a href="#">Phonebook</a></li>
-            <li><a href="#">Math Textbook</a></li>
-            <li><a href="#">Calculator</a></li>
-            <li><a href="#">Basketball</a></li>
-            <li><a href="#">Hockey Puck</a></li>
-            <li><a href="#">Hockey Stick</a></li>
-            <li><a href="#">Hockey Net</a></li>
+            <li><a href="#">1 hit Pack Basketball</a></li>
+            <li><a href="#">1 hit Pack Hockey</a></li>
+            <li><a href="#">1 hit Pack Baseball</a></li>
+            <li><a href="#">1 hit Pack Football</a></li>
+            <li><a href="#">12 Card Pack Hockey</a></li>
+            <li><a href="#">12 Card Pack Basketball</a></li>
+            <li><a href="#">Allure 23-24</a></li>
+            <li><a href="#">Allure 22-23</a></li>
+            <li><a href="#">CHL Box 23-24</a></li>
+            <li><a href="#">CHL Box 22-23</a></li>
+            <li><a href="#">1 Mystery Graded Card (hockey edition)</a></li>
             <li><a href="#">Upper Deck 23-24</a></li>
             <li><a href="#">Upper Deck 22-23</a></li>
-            <li><a href="#">Sharpener</a></li>
+            <li><a href="#">O Pee Chee 23-24</a></li>
+            <li><a href="#">O Pee Chee 22-23</a></li>
+            <li><a href="#">O Pee Chee Platinum 23-24</a></li>
+            <li><a href="#">O Pee Chee Platinum 22-23</a></li>
+            <li><a href="#">Panini Prism 23-24</a></li>
+            <li><a href="#">Panini Prism 22-23</a></li>
+            <li><a href="#">NBA Donruss 23-24</a></li>
+            <li><a href="#">NBA Donruss 22-23</a></li>
+            <li><a href="#">SP Authentic 23-24</a></li>
+            <li><a href="#">SP Authentic 22-23</a></li>
+            <li><a href="#">Dollarama Mystery Pokemon Pack</a></li>
+            <li><a href="#">Dollarama Mystery Hockey Pack</a></li>
+            <li><a href="#">Topps Baseball 23-24</a></li>
+            <li><a href="#">Topps Baseball 22-23</a></li>
+            <li><a href="#">Topps Chrome 23-24</a></li>
+            <li><a href="#">Topps Chrome 22-23</a></li>
+            <li><a href="#">Card Sleeves</a></li>
+            <li><a href="#">Card Binder</a></li>
+            <li><a href="#">Card Protector</a></li>
+            <li><a href="#">Jumbo Card Sleeves</a></li>
+            <li><a href="#">Jumbo Card Protector</a></li>
             <li><a href="#">Phonebook</a></li>
             <li><a href="#">Math Textbook</a></li>
             <li><a href="#">Calculator</a></li>
@@ -137,29 +157,37 @@
 
         <!-- Javascript section -->
         <script>
+            // By default when you go on the page, you won't see any
+            document.getElementById("myUL").style.display = "none";    
+
             function myFunction() {
                 var input, filter, ul, li, a, i, txtValue;
                 input = document.getElementById("myInput");
                 filter = input.value.toUpperCase();
                 ul = document.getElementById("myUL");
                 li = ul.getElementsByTagName("li");
+                
                 for (i = 0; i < li.length; i++) {
                     a = li[i].getElementsByTagName("a")[0];
                     txtValue = a.textContent || a.innerText;
                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        document.getElementById("myUL").style.display = "block";   
                         li[i].style.display = "";
                     } else {
                         li[i].style.display = "none";
+                        
                     }
                 }
                 10
+
+                // An if statement for when you type and clear the whole input
+                if (txtValue.toUpperCase().indexOf(filter) == 0){
+                    document.getElementById("myUL").style.display = "none";   
+                }
+
             }
 
-            // This section will ensure the list don't show up when entering the website right away
-
-            if (li[i].style.display = "") {
-                li[i].style.display = "none";
-            }
+     
         </script>
     
 </body>
