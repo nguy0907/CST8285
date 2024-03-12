@@ -44,40 +44,50 @@ td{
 }
 /* Attribute Selector */
 input[type ="text"] {
-color: red;
+color: grey;
 }
 
 /* Universal Attribute */
 * td {
     color: green;
 }
+
+
 /* Menu CSS */
 
 .menu{
+    width: auto;
+    margin: auto;
     display: flex;
+    background-color: black;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    
 }
 
 .menu a {
  margin-right: 5rem;
+ text-decoration: none;
+ color: gold;
 }
 .homebuttom:hover,
 a[ href="#Products"]:hover,
 a[href="#Contact"]:hover,
-a[href="aboutme.html"]:hover{
-background-color: rgb(209, 206, 206);
-}
-
+a[href="aboutme.html"]:hover,
 a[href="currency.php"]:hover,
 a[class="service2"]:hover,
 a[class="frenchtranslation"]:hover,
-a[class="service2"]:hover{
-    background-color: grey;
+a[class="service2"]:hover,
+.dropdown:hover{
+background-color: green;
 }
+
 
 #messageHour{
     color: red;
     font-weight: bold;
     float: right;
+   
 }
 
 .dropdown-content{
@@ -86,4 +96,8 @@ a[class="service2"]:hover{
 
 .dropdown:hover .dropdown-content{
     display: block;
+}
+
+.mainIconPathAttribute{
+    margin-left: -4rem;
 }
