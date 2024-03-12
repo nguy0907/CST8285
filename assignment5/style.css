@@ -97,7 +97,3 @@ background-color: green;
 .dropdown:hover .dropdown-content{
     display: block;
 }
-
-.mainIconPathAttribute{
-    margin-left: -4rem;
-}
