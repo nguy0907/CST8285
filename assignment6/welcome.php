@@ -4,7 +4,17 @@
 <title>Welcome</title>
 </head>
 <body>
-<?php  ?>
+    <a href="../welcome.php?firstName=ExampleFirstName"> $_GET</a>
+    <a href="../welcome.php?lastName=ExampleLastName"> $_GET</a>
+
+<?php if ("../welcome.php?firstName=ExampleFirstName"){
+    echo "Howdy " .  $_GET['firstName'] ;
+} else if ("../welcome.php?lastName=ExampleLastName"){
+    echo "Howdy " .  $_GET['lastName'] ;
+}
+
+?>
+
 
 <h1>If you want a custom greeting message, please do the following: </h1>
 <fieldset>
