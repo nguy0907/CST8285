@@ -4,18 +4,7 @@
 <title>Welcome</title>
 </head>
 <body>
-    <a href="../welcome.php?firstName=ExampleFirstName"> $_GET</a>
-    <a href="../welcome.php?lastName=ExampleLastName"> $_GET</a>
-
-<?php if ("../welcome.php?firstName=ExampleFirstName"){
-    echo "Howdy " .  $_GET['firstName'] ;
-} else if ("../welcome.php?lastName=ExampleLastName"){
-    echo "Howdy " .  $_GET['lastName'] ;
-}
-
-?>
-
-
+  
 <h1>If you want a custom greeting message, please do the following: </h1>
 <fieldset>
 <ol>
@@ -25,5 +14,16 @@
 <li>Hit ENTER and see your customized message in the greeting below</li>
 </ol>
 </fieldset>
+
+<?php 
+if (isset($_GET['firstName'])){
+  echo  "Greeting: Howdy " .  $_GET['firstName'] ;
+} else if (isset($_GET['lastName'])){
+echo "Greeting: Howdy " .  $_GET['lastName'] ;
+} else if (isset($_GET['lastName']) || isset($_GET['lastName'])){
+    echo "Greeting: No Name" ;
+    } 
+?>
+</p>
 </body>
 </html>
