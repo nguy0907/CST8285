@@ -14,14 +14,14 @@
 <li>Hit ENTER and see your customized message in the greeting below</li>
 </ol>
 </fieldset>
-
+<a href="../welcome.php?firstName=&lastName="></a>
 <?php 
 if (isset($_GET['firstName'])){
   echo  "Greeting: Howdy " .  $_GET['firstName'] ;
 } else if (isset($_GET['lastName'])){
 echo "Greeting: Howdy " .  $_GET['lastName'] ;
-} else if (isset($_GET['lastName']) || isset($_GET['lastName'])){
-    echo "Greeting: No Name" ;
+} else if (isset($_GET['firstName']) + isset($_GET['lastName']) == "../welcome.php?firstName=&lastName="){
+    echo "cock" .  $_GET['firstName'] .  $_GET['lastName'];
     } 
 ?>
 </p>

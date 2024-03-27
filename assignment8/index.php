@@ -53,6 +53,32 @@
 </head>
 
 <body>
+
+
+    <?php 
+    
+// Use echo to print to the screen the html and table start tags
+echo "<table>\n\n";
+// Open csv file
+$file = fopen("input.csv","r");
+// Add appropriate code to open a file in PHP
+
+// Fetching data from csv file row by row
+while (($data = fgetcsv($file)) !== false) {
+// Use echo to print to the screen the appropriate <tr> and <td> elements based on the CSV
+echo"<tr> 
+<td>$data[0]</td> 
+<td>$data[1]</td>
+<td>$data[6]</td>
+</tr>";
+}
+// Close the file
+
+// Use echo to print to the screen the html and table end tags
+echo "\n</table>";
+    
+    ?>
+
     <!-- Menu Bar -->
     <div class="menu">
         <!-- Homebutton -->
